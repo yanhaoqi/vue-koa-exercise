@@ -31,12 +31,18 @@ const router = new VueRouter({
     }
   ]
 });
+//两种写法
+// new Vue({
+//   router:router,
+//   el: '#app',
+//   template: '<App/>',
+//   components: { App }
+// })
 
 new Vue({
   router:router,
-  el: '#app',
-  template: '<App/>',
-  components: { App }
-})
-
+  //参数是个函数，调动该函数并且传入App组件作为实参
+  render:h => h(App)
+  //挂载到#app元素上
+}).$mount('#app');
 
