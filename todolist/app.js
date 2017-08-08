@@ -5,10 +5,7 @@ const koa = require('koa');
 const app = new koa();
 
 app.use(async (ctx,next) => {
-  let start = new Date;
-  next();
-  let ms = new Date - start;
-  console.log(ctx.request.method,ctx.request.url,ms);
+  console.log(ctx.request.method,ctx.request.url);
 });
 app.on('error',function(err,ctx){
   console.log('server err======',err);

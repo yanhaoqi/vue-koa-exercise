@@ -1,23 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!--路由视图渲染目标元素-->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+//  不需要再引入、注册Login、Todolist组件，因为在路由视图中已经引入、注册了
 export default {
   name: 'app'
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
