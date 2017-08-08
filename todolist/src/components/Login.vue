@@ -10,19 +10,25 @@
         <el-input v-model="password" placeholder="请输入密码" type="password">
         </el-input>
       </el-row>
-      <el-button type="primary">登录</el-button>
+      <el-button type="primary" @click="login">登录</el-button>
     </el-col>
   </el-row>
 </template>
 
 <script>
 export default{
-    data(){
-        return {
-            account:'',
-            password:''
-        }
-    }
+  data(){
+      return {
+          account:'',
+          password:''
+      }
+  },
+  methods:{
+      login(){
+//          导航到其他url
+          this.$router.push('/todo')
+      }
+  }
 }
 </script>
 <!--scoped属性保证样式只对该组件生效-->
